@@ -5,7 +5,7 @@ import { useSelector } from 'react-redux';
 import Post from './Post/Post';
 import useStyles from './styles';
 
-const Posts = () => {
+const Posts = ({ setCurrentId }) => {
   const posts = useSelector((state) => state.posts);
   // eslint-disable-next-line
   const classes = useStyles();
@@ -24,7 +24,7 @@ const Posts = () => {
       {posts.map((post) => (
         // eslint-disable-next-line no-underscore-dangle
         <Grid key={post._id} item sx={12} sm={6}>
-          <Post post={post} />
+          <Post post={post} setCurrentId={setCurrentId} />
         </Grid>
       ))}
     </Grid>

@@ -32,6 +32,7 @@ module.exports = {
       { 'avoidEscape': true, 'allowTemplateLiterals': false }
     ],
     'quotes': [2, 'single', {'avoidEscape':  true}],
+    'no-underscore-dangle': 0,
     // 'quotes': ['single'],
     'import/no-extraneous-dependencies': ['error', { 'devDependencies': true }],
     'max-len': ['error', { 'code': 140 }],
